@@ -13,13 +13,12 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            // FK steps
-            // FK comments
-            // FK attach
-            $table->integer('id_steps')->unsigned();
-            $table->integer('id_comments')->unsigned();
-            $table->integer('id_attachs')->unsigned();
-            $table->integer('id_creator')->unsigned(); // FK User de User_task
+
+            $table->foreignId('id_steps')->constrained(table: 'steps');
+            $table->foreignId('id_comments')->constrained(table: 'comments');
+            $table->foreignId('id_attachs')->constrained(table: 'attachs');
+
+            $table->foreignId('id_users')->constrained(table: 'users');
 
             $table->string('nome');
             // FK de Asign (???)

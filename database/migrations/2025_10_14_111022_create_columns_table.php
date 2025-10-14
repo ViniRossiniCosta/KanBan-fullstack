@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users_tasks', function (Blueprint $table) {
+        Schema::create('positions', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_users')->unsigned();
-            $table->integer('id_tasks')->unsigned();
+            $table->string('cod');
+            $table->string('desc');
+            $table->string('status')->default('A');
+            $table->foreignId('id_tasks')->constrained(table: 'tasks');
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users_tasks');
+        Schema::dropIfExists('positions');
     }
 };

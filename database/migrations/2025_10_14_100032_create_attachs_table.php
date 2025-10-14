@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('attachs', function (Blueprint $table) {
             $table->id();
-            $table->string('desc');
+            $table->foreignId('id_users')->constrained(table: 'users');
+            $table->string('url');
+            $table->integer('qtd');
             $table->timestamps();
         });
     }
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('attachs');
     }
 };
