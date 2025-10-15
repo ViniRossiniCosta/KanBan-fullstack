@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('boards', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_positions')->constrained(table: 'positions');
-            $table->string('Title');
+            $table->foreignId('id_users')->constrained(table: 'users');
+            $table->foreignId('id_tasks')->constrained(table: 'tasks');
+            $table->string('desc');
+            $table->timestamps();
         });
     }
 
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('boards');
+        Schema::dropIfExists('comments');
     }
 };

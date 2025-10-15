@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_users')->constrained(table: 'users');
-            $table->string('desc');
+            $table->foreignId('id_positions')->constrained(table: 'positions');
+            $table->string('nome');
+            // FK de Asign (???)
+            $table->timestamp('dt_start');
+            $table->timestamp('dt_end');
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('tasks');
     }
 };

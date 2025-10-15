@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('attachs', function (Blueprint $table) {
+        Schema::create('steps', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_users')->constrained(table: 'users');
-            $table->string('url');
-            $table->integer('qtd');
+            $table->foreignId('id_tasks')->constrained(table: 'tasks');
+            $table->string('dec');
+            $table->string('completed');
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('attachs');
+        Schema::dropIfExists('steps');
     }
 };

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('cod');
             $table->string('desc');
             $table->string('status')->default('A');
-            $table->foreignId('id_tasks')->constrained(table: 'tasks');
+            $table->foreignId('boards_id')->constrained(table: 'boards');
             $table->timestamps();
         });
     }
