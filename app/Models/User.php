@@ -49,7 +49,8 @@ class User extends Authenticatable
         ];
     }
 
-    public function boards() {
-        return $this->belongsTo(Boards::class);
+    public function boards()
+    {
+        return $this->belongsToMany(Board::class)->using(UserBoard::class)->withPivot(['user_id', 'board_id']);
     }
 }

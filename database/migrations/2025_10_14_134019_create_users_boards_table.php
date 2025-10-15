@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users_boards', function (Blueprint $table) {
-            // FK users
-            // FK boards
-            $table->integer('id_users')->unsigned();
-            $table->integer('id_boards')->unsigned();
-            $table->string('permissao')->default('A');
+        Schema::create('board_user', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained(table: 'users');
+            $table->foreignId('board_id')->constrained(table: 'boards');
+            $table->string('permission')->default('A'); // A-Admin, E-Edit, C-Comment, V-View
         });
     }
 
