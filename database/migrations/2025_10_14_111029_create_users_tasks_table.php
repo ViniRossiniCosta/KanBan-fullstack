@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users_tasks', function (Blueprint $table) {
-            $table->foreignId('id_users')->constrained(table: 'users', indexName: 'users_id');
-            $table->foreignId('id_tasks')->constrained(table: 'tasks', indexName: 'tasks_id');
+        Schema::create('task_user', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('tasks_id')->constrained(table: 'tasks');
+            $table->foreignId('users_id')->constrained(table: 'users');
         });
     }
 

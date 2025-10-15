@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Steps extends Model
 {
-    //
+    public function tasks()
+    {
+        return $this->hasMany(Task::class, 'task_id');
+    }
+
+    public function users()
+    {
+        return $this->hasMany(User::class, 'user_id');
+    }
 }
