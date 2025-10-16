@@ -19,11 +19,11 @@ class TaskController extends Controller
             'dt_end' => 'required|datetime'
         ]);
 
-        $task = ::create([
-            'nome' => $request->nome,
-            'dt_start' => $request->dt_start,
-            'dt_end' => $request->dt_end,
-        ]);
+        // $task = ::create([
+        //     'nome' => $request->nome,
+        //     'dt_start' => $request->dt_start,
+        //     'dt_end' => $request->dt_end,
+        // ]);
     }
 
     public function edit() {
