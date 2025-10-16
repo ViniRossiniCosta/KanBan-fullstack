@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class UserBoard extends Pivot
 {
+    protected $fillable = [
+        'permission',
+    ];
+
+    protected $hidden = [
+        'user_id',
+        'board_id'
+    ];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
