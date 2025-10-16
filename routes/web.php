@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AttachController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\StepController;
 
 Route::get('/', function () {
@@ -22,7 +24,7 @@ Route::middleware(['TaskExists'])->group(function() {
 });
 
 // Routes do board
-Route::middleware(['BoardExists','EditPermission'])->group(function() {
+Route::middleware(['BoardExists'])->group(function() {
     Route::patch('board/form',[BoardController::class, 'create'])->name('board.create');
     Route::get('board/form',[BoardController::class, 'edit'])->name('board.edit');
     Route::delete('board/form',[BoardController::class, 'delete'])->name('board.delete');
@@ -37,16 +39,16 @@ Route::middleware(['TaskExists','StepExists'])->group(function() {
 
 // Routes do attach
 Route::middleware(['TaskExists','AttachExists'])->group(function() {
-    Route::patch('board/form',[BoardController::class, 'create'])->name('board.create');
-    Route::get('board/form',[BoardController::class, 'edit'])->name('board.edit');
-    Route::delete('board/form',[BoardController::class, 'delete'])->name('board.delete');
+    Route::patch('board/form',[AttachController::class, 'create'])->name('board.create');
+    Route::get('board/form',[AttachController::class, 'edit'])->name('board.edit');
+    Route::delete('board/form',[AttachController::class, 'delete'])->name('board.delete');
 });
 
 // Routes do comment
 Route::middleware(['TaskExists','CommentExists'])->group(function() {
-    Route::patch('board/form',[BoardController::class, 'create'])->name('board.create');
-    Route::get('board/form',[BoardController::class, 'edit'])->name('board.edit');
-    Route::delete('board/form',[BoardController::class, 'delete'])->name('board.delete');
+    Route::patch('board/form',[CommentController::class, 'create'])->name('board.create');
+    Route::get('board/form',[CommentController::class, 'edit'])->name('board.edit');
+    Route::delete('board/form',[CommentController::class, 'delete'])->name('board.delete');
 });
 
 require __DIR__.'/settings.php';

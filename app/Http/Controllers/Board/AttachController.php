@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class AttachController extends Controller
 {
@@ -15,10 +16,6 @@ class AttachController extends Controller
     }
 
     public function store() {
-
-    }
-
-    public function show() {
 
     }
 }
