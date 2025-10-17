@@ -1,5 +1,5 @@
 <script setup>
-import Column from "../../components/Column.vue";
+import Column from "./Column.vue";
 // import { ref } from 'vue'
 
 // defineProps({

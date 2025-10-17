@@ -3,7 +3,7 @@
     "style": "default",
     "tailwind": {
         "config": "tailwind.config.js",
-        "css": "resources/css/app.css",
+        "css": "resources/css/trello.css",
         "baseColor": "neutral",
         "cssVariables": true,
         "prefix": ""

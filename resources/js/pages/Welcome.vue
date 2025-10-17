@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { dashboard, login, register } from '@/routes';
 import { Head, Link } from '@inertiajs/vue3';
+import cardTag from '@/components/cardTag.vue';
 </script>
 
 <template>
@@ -31,6 +32,7 @@ import { Head, Link } from '@inertiajs/vue3';
             </Link>
         </template>
     </nav>
+    <Board />
 </template>
 <style scoped>
 .naoseiintegrar {

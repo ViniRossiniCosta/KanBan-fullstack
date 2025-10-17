@@ -13,7 +13,7 @@
         "cn",
         "cva"
     ],
-    "tailwindStylesheet": "resources/css/app.css",
+    "tailwindStylesheet": "resources/css/trello.css",
     "tabWidth": 4,
     "overrides": [
         {

@@ -12,7 +12,13 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-    <AppLayout :breadcrumbs="breadcrumbs">
+    <AppLayout :breadcrumbs="breadcrumbs" class="suamae">
         <slot />
     </AppLayout>
 </template>
+
+<style scoped>
+.suamae {
+    background-color: coral;
+}
+</style>
