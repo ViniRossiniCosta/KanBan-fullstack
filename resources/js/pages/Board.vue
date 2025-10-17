@@ -1,6 +1,6 @@
 <script setup>
 // import { ref } from 'vue'
-import addColumn from './main/pop-ups/addColumn.vue';
+// import addColumn from './main/pop-ups/addColumn.vue';
 
 // defineProps({
 //   msg: String,
@@ -66,7 +66,7 @@ import addColumn from './main/pop-ups/addColumn.vue';
 </script>
 
 <template>
-  <div class="bg-gray-400 p-4 overflow-x-auto gap-4 w-full altBg">
+  <div class="altBg">
     <addColumn class="" />
   </div>
 </template>
@@ -74,5 +74,6 @@ import addColumn from './main/pop-ups/addColumn.vue';
 <style scoped>
 .altBg {
   width: 209vh;
+  background-color: azure;
 }
 </style>

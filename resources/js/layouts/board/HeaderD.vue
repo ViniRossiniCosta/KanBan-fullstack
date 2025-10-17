@@ -65,29 +65,8 @@
 </template>
 
 <script setup>
-import addCard from '../main/pop-ups/addCard.vue'
 import { ref } from 'vue'
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-} from '@headlessui/vue'
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from '@heroicons/vue/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
+import { PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
 
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
