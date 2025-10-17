@@ -1,7 +1,6 @@
 <script setup>
 // import { ref } from 'vue'
-// import addColumn from './main/pop-ups/addColumn.vue';
-
+import addColumn from '@/components/addColumn.vue';
 // defineProps({
 //   msg: String,
 // })
@@ -73,7 +72,8 @@
 
 <style scoped>
 .altBg {
-  width: 209vh;
+  width: 218vh;
+  height: 8%;
   background-color: azure;
 }
 </style>

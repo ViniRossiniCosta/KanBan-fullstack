@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { dashboard, login, register } from '@/routes';
 import { Head, Link } from '@inertiajs/vue3';
-import cardTag from '@/components/cardTag.vue';
+import Board from './board/Board.vue';
+import FooterD from '@/layouts/board/FooterD.vue';
 </script>
 
 <template>
@@ -15,7 +16,7 @@ import cardTag from '@/components/cardTag.vue';
             :href="dashboard()"
             class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
         >
-            Dashboard
+            Board
         </Link>
         <template v-else>
             <Link
@@ -32,7 +33,8 @@ import cardTag from '@/components/cardTag.vue';
             </Link>
         </template>
     </nav>
-    <Board />
+<Board />
+<FooterD />
 </template>
 <style scoped>
 .naoseiintegrar {

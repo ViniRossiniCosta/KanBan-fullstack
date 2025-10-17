@@ -3,7 +3,7 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-2" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
-          <img class="h-8 w-auto" src="../../assets/freeline.webp" alt="" />
+          <img class="h-8 w-auto" src="" alt="" />
         </a>
       </div>
       <div class="flex lg:hidden text-black">
@@ -36,7 +36,7 @@
       <DialogPanel class="bg-white fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
-            <img class="h-8 w-auto" src="../../assets/freeline.webp" alt="" />
+            <img class="h-8 w-auto" src="" alt="" />
           </a>
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = false">
             <XMarkIcon class="size-6" aria-hidden="true" />

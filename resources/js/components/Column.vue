@@ -1,5 +1,5 @@
 <script setup>
-import Cards from './core/Cards.vue'
+import Cards from './Cards.vue';
 // import { ref } from 'vue'
 
 // defineProps({
@@ -20,7 +20,7 @@ import Cards from './core/Cards.vue'
 
 <style scoped>
 .ct {
-  background-color: rgba(121, 112, 112, 0.322);
+  background-color: rgb(255, 0, 0);
   width: 240px;
   height: 71vh;
 }
