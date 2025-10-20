@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import Column from './Column.vue';
+import Column from './Column.vue';
 // import { ref } from 'vue'
 
 
@@ -24,8 +24,7 @@
   </dialog>
 
   <div class="overflow-x-auto">
-    <!-- <Column /> -->
-     coluymn
+    <Column />
   </div>
 </template>
 <style scoped>

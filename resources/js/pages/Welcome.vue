@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { dashboard, login, register } from '@/routes';
-// import { Head, Link } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 import Board from './Board.vue';
 import FooterD from '@/layouts/board/FooterD.vue';
 </script>
 
 <template>
-    <!-- <Head title="Welcome">
+    <Head title="Welcome">
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    </Head> -->
+    </Head>
     <nav class="flex items-center justify-end gap-4 naoseiintegrar">
         <Link
             v-if="$page.props.auth.user"

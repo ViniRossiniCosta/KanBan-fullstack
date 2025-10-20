@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // import { ref } from 'vue'
-// import addColumn from '@/components/board/addColumn.vue';
+import addColumn from '@/components/board/addColumn.vue';
 // defineProps({
 //   msg: String,
 // })
@@ -63,7 +63,6 @@
 //   emit("editStatus", newStatus, oldStatus);
 // };
 
-import addColumn from '../components/addColumn.vue';
 </script>
 
 <template>

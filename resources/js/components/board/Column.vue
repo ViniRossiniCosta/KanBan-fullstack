@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import Cards from './Cards.vue';
+import Cards from './Cards.vue';
 // import { ref } from 'vue'
 
 // defineProps({
@@ -14,7 +14,7 @@
   <div class="overflow-y-auto min-h-1/3 ct justify-items-center content-center rounded-md">
     <div class="">
         card
-      <!-- <Cards /> -->
+      <Cards />
     </div>
   </div>
 </template>
