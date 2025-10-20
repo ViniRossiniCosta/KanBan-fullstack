@@ -11,8 +11,8 @@ import shareButton from './shareButton.vue';
 
 <template>
   <div class="dt">
-    <div class="align-self-safe text-white text-[1.3rem]">Development
-      Sprint Board<span class="pi pi-th-large" style="font-size: 1.3rem"></span>Board</div>
+    <div class="align-self-safe text-white text-[1.3rem]"><div class="sla">&#8239; Development
+      Sprint Board &#8239;<span class="pi pi-th-large" style="font-size: 1.3rem"></span>&#8239; Board</div></div>
 
     <div class="">
       <shareButton />
@@ -22,12 +22,23 @@ import shareButton from './shareButton.vue';
 
 <style scoped>
 .dt {
-  height: 90px;
+  height: 50px;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  justify-items: auto;
+  align-items: center;
   justify-content: space-between;
-  background-color: azure;
+  background-color: #6697ff;
+
+  position: fi;
+
+  width: 220vh;
+}
+
+.sla {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
 }
 </style>

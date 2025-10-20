@@ -13,7 +13,9 @@ import Column from './Column.vue';
 
 <template>
   <div class="pact">
+    &#8239;
     <button class="bact">
+        &#8239;
       <span class="pi pi-plus" style="font-size: 1.4rem"></span>
     </button>
   </div>

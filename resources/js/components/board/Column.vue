@@ -13,7 +13,6 @@ import Cards from './Cards.vue';
   <!-- add v-if -->
   <div class="overflow-y-auto min-h-1/3 ct justify-items-center content-center rounded-md">
     <div class="">
-        card
       <Cards />
     </div>
   </div>

@@ -76,8 +76,9 @@ import addColumn from '@/components/board/addColumn.vue';
   display: flex;
   align-items: center;
   column-gap: 1.2%;
-  width: 219vh;
-  height: 530px;
+  width: 220vh;
+  height: 81vh;
   background-color: rgba(128, 128, 128, 0.753);
+  padding-left: 5px;
 }
 </style>

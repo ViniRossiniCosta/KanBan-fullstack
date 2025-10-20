@@ -14,7 +14,7 @@
 
 <style scoped>
 .comoeuamoestilizarisso {
-    background: #008cffce;
+    background: #7ba6ca7e;
     border-radius: 7px;
 }
 </style>

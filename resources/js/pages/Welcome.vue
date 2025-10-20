@@ -34,6 +34,7 @@ import FooterD from '@/layouts/board/FooterD.vue';
             </Link>
         </template>
     </nav>
+<!-- <HeaderD /> -->
 <MidNav />
 <Board />
 <FooterD />
