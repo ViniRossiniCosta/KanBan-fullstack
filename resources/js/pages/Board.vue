@@ -1,6 +1,6 @@
-<script setup>
+<script setup lang="ts">
 // import { ref } from 'vue'
-import addColumn from '@/components/addColumn.vue';
+// import addColumn from '@/components/board/addColumn.vue';
 // defineProps({
 //   msg: String,
 // })
@@ -62,6 +62,8 @@ import addColumn from '@/components/addColumn.vue';
 //   columnStatuses.value[columnStatuses.value.indexOf(oldStatus)] = newStatus;
 //   emit("editStatus", newStatus, oldStatus);
 // };
+
+import addColumn from '../components/addColumn.vue';
 </script>
 
 <template>

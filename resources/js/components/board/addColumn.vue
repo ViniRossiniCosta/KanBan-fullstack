@@ -1,6 +1,7 @@
-<script setup>
-import Column from './board/Column.vue';
+<script setup lang="ts">
+// import Column from './Column.vue';
 // import { ref } from 'vue'
+
 
 // defineProps({
 //   msg: String,
@@ -23,10 +24,10 @@ import Column from './board/Column.vue';
   </dialog>
 
   <div class="overflow-x-auto">
-    <Column />
+    <!-- <Column /> -->
+     coluymn
   </div>
 </template>
-
 <style scoped>
 .pact {
   display: flex;

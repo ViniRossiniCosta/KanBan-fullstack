@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Column;
 class Task extends Model
 {
 
@@ -34,8 +34,8 @@ class Task extends Model
         return $this->belongsToMany(User::class)->using(UserBoard::class)->withPivot(['user_id', 'task_id']);
     }
 
-    public function tasks()
+    public function position()
     {
-        return $this->belongsToMany(Task::class)->using(UserTask::class)->withPivot(['user_id', 'task_id']);
+        return $this->belongsTo(Column::class);
     }
 }

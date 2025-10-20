@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // import { ref } from "vue";
 
 // defineProps({
@@ -11,12 +11,12 @@
 
 <template>
   <div class="view_card text-[4.rem] break-all md:place-content-center text-shadow-[0_35px_35px_rgb(0_0_0_/_0.25)] ">
-    
+
   </div>
 
   <div class="">
     <dialog>
-      
+
     </dialog>
   </div>
 </template>
