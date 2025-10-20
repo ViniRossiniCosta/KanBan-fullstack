@@ -12,8 +12,8 @@ import Column from './Column.vue';
 </script>
 
 <template>
-  <div class="bg-gray-300 rounded-md pact">
-    <button class="backdrop-blur-sm rounded-md bact">
+  <div class="pact">
+    <button class="bact">
       <span class="pi pi-plus" style="font-size: 1.4rem"></span>
     </button>
   </div>
@@ -31,6 +31,7 @@ import Column from './Column.vue';
 .pact {
   display: flex;
   justify-content: center;
+  background-color: transparent;
 
   width: 240px;
   height: 65vh;
@@ -40,9 +41,12 @@ import Column from './Column.vue';
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: lightgray;
 
   width: 240px;
   height: 65vh;
+
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
 }
 </style>

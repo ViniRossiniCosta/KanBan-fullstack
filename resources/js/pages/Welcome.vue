@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { dashboard, login, register } from '@/routes';
 import { Head, Link } from '@inertiajs/vue3';
+import MidNav from '@/components/board/MidNav.vue';
 import Board from './Board.vue';
 import FooterD from '@/layouts/board/FooterD.vue';
 </script>
@@ -33,6 +34,7 @@ import FooterD from '@/layouts/board/FooterD.vue';
             </Link>
         </template>
     </nav>
+<MidNav />
 <Board />
 <FooterD />
 </template>

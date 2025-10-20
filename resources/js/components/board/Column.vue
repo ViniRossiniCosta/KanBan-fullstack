@@ -23,7 +23,12 @@ import Cards from './Cards.vue';
 .ct {
   background-color: rgb(255, 0, 0);
   width: 240px;
-  height: 71vh;
+  height: 65vh;
+
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow-y: auto;
+  column-gap: 1px;
 }
 
 </style>

@@ -1,5 +1,5 @@
-<script setup>
-import shareButton from '../main/pop-ups/shareButton.vue';
+<script setup lang="ts">
+import shareButton from './shareButton.vue';
 // import { ref } from 'vue'
 
 // defineProps({
@@ -13,7 +13,7 @@ import shareButton from '../main/pop-ups/shareButton.vue';
   <div class="dt">
     <div class="align-self-safe text-white text-[1.3rem]">Development
       Sprint Board<span class="pi pi-th-large" style="font-size: 1.3rem"></span>Board</div>
-    
+
     <div class="">
       <shareButton />
     </div>
@@ -22,9 +22,12 @@ import shareButton from '../main/pop-ups/shareButton.vue';
 
 <style scoped>
 .dt {
-  height: 170px;
+  height: 90px;
   display: flex;
+  justify-content: center;
+  flex-direction: row;
   justify-items: auto;
   justify-content: space-between;
+  background-color: azure;
 }
 </style>
