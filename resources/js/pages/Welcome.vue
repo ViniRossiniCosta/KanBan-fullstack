@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import addCard from '@/components/board/addCard.vue';
+import MidNav from '@/components/board/MidNav.vue';
+import FooterD from '@/layouts/board/FooterD.vue';
 import { dashboard, login, register } from '@/routes';
 import { Head, Link } from '@inertiajs/vue3';
-import MidNav from '@/components/board/MidNav.vue';
 import Board from './Board.vue';
-import FooterD from '@/layouts/board/FooterD.vue';
 </script>
 
 <template>
@@ -11,7 +12,67 @@ import FooterD from '@/layouts/board/FooterD.vue';
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
-    <nav class="flex items-center justify-end gap-4 naoseiintegrar">
+    <nav class="naoseiintegrar flex items-center justify-end gap-4">
+        <img src="" alt="" />
+        <Link
+            v-if="$page.props.auth.user"
+            :href="dashboard()"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Board
+        </Link>
+        <Link
+            v-if="$page.props.auth.user"
+            :href="dashboard()"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Board
+        </Link>
+        <Link
+            v-if="$page.props.auth.user"
+            :href="dashboard()"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Board
+        </Link>
+        <Link
+            v-if="$page.props.auth.user"
+            :href="dashboard()"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Board
+        </Link>
+        <Link v-if="$page.props.auth.user" :href="dashboard()">
+            <addCard />
+        </Link>
+        <Link
+            v-if="$page.props.auth.user"
+            :href="dashboard()"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Board
+        </Link>
+        <Link
+            v-if="$page.props.auth.user"
+            :href="dashboard()"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Board
+        </Link>
+        <Link
+            v-if="$page.props.auth.user"
+            :href="dashboard()"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Board
+        </Link>
+        <Link
+            v-if="$page.props.auth.user"
+            :href="dashboard()"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Board
+        </Link>
         <Link
             v-if="$page.props.auth.user"
             :href="dashboard()"
@@ -34,13 +95,17 @@ import FooterD from '@/layouts/board/FooterD.vue';
             </Link>
         </template>
     </nav>
-<!-- <HeaderD /> -->
-<MidNav />
-<Board />
-<FooterD />
+    <!-- <HeaderD /> -->
+    <MidNav />
+    <Board />
+    <FooterD />
 </template>
 <style scoped>
 .naoseiintegrar {
-    background-color: rgb(238, 255, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
 }
 </style>

@@ -10,7 +10,6 @@
 
 <template>
   <button class="alt" style="font-size: 1.2rem"><span class="pi pi-plus act">Create</span></button>
-
   <div class="">
     <dialog>
 
@@ -19,16 +18,12 @@
 </template>
 
 <style scoped>
-.act {
-  gap: 1%;
-}
-
 .alt {
+ font-family: Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  gap: 2%;
   height: 32px;
 }
 </style>

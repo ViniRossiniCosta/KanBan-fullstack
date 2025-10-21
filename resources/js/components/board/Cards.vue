@@ -10,8 +10,8 @@
 </script>
 
 <template>
-  <div class="view_card text-[4.rem] break-all md:place-content-center text-shadow-[0_35px_35px_rgb(0_0_0_/_0.25)] ">
-
+  <div class="view_card">
+    CARD
   </div>
 
   <div class="">
@@ -23,10 +23,12 @@
 
 <style scoped>
 .view_card {
-  width: 23vh;
+  width: 27vh;
   height: 120px;
   background-color: rgb(255, 0, 255);
   border-radius: 9px;
+
+  word-break: break-all;
 }
 
 </style>
