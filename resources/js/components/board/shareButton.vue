@@ -9,12 +9,19 @@
 </script>
 
 <template>
-    <button class="rounded-md comoeuamoestilizarisso" style="font-size: 1.3rem"><span class="pi pi-plus"></span> Share </button>
+    <button class="rounded-md comoeuamoestilizarisso" style="font-size: 1.3rem"><span class="material-icons">add</span> Share </button>
 </template>
 
 <style scoped>
 .comoeuamoestilizarisso {
-    background: #7ba6ca7e;
     border-radius: 7px;
+    width: 85%;
+    display: flex;
+    justify-items: center;
+}
+
+button {
+    color: white;
+    background-color: rgba(0, 0, 255, 0.493);
 }
 </style>

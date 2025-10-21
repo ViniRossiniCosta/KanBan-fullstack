@@ -28,7 +28,7 @@
 
   gap: 3%;
   height: 8%;
-  height: 8vh;
+  height: 12vh;
 
   bottom: 0;
   width: 100%;

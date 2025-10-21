@@ -2,7 +2,7 @@
 import addCard from '@/components/board/addCard.vue';
 import MidNav from '@/components/board/MidNav.vue';
 import FooterD from '@/layouts/board/FooterD.vue';
-import { dashboard, login, register } from '@/routes';
+import { login, register } from '@/routes';
 import { Head, Link } from '@inertiajs/vue3';
 import Board from './Board.vue';
 </script>
@@ -13,7 +13,11 @@ import Board from './Board.vue';
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
     <nav class="naoseiintegrar flex items-center justify-end gap-4">
-        <img src="" alt="" />
+        <img
+            src="../../../public/image-removebg-preview.png"
+            class="pqnaofazautomatico"
+            alt=""
+        />
         <a
             v-if="$page.props.auth.user"
             class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
@@ -44,16 +48,12 @@ import Board from './Board.vue';
 
         <input type="search" placeholder="search.." class="deixabonito" />
         <div class="">
-            <a
-                v-if="$page.props.auth.user"
-            >
+            <a v-if="$page.props.auth.user">
                 <span class="pi pi-bell"></span>
             </a>
         </div>
         <div class="">
-            <a
-                v-if="$page.props.auth.user"
-            >
+            <a v-if="$page.props.auth.user">
                 <span class="pi pi-question-circle"></span>
             </a>
         </div>
@@ -61,16 +61,8 @@ import Board from './Board.vue';
             <a> <span class="pi pi-user"></span> </a>
         </div>
         <template v-else>
-            <Link
-                :href="login()"
-            >
-                Log in
-            </Link>
-            <Link
-                :href="register()"
-            >
-                Register
-            </Link>
+            <Link :href="login()"> Log in </Link>
+            <Link :href="register()"> Register </Link>
         </template>
     </nav>
     <!-- <HeaderD /> -->
@@ -96,5 +88,12 @@ a {
     border-radius: 6px;
     padding: 0.3%;
     display: flex;
+}
+
+.pqnaofazautomatico {
+    max-height: 9%;
+    max-width: 11%;
+    width: 3.6%;
+    height: 1%;
 }
 </style>

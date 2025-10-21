@@ -9,12 +9,12 @@
 </script>
 
 <template>
-  <button class="alt" style="font-size: 1.2rem"><span class="pi pi-plus act">Create</span></button>
-  <div class="">
-    <dialog>
-
-    </dialog>
-  </div>
+    <button class="alt" style="font-size: 1.2rem">
+        <span class="pi pi-plus act">Create</span>
+    </button>
+    <div class="">
+        <dialog></dialog>
+    </div>
 </template>
 
 <style scoped>
@@ -25,5 +25,7 @@
   justify-content: space-between;
 
   height: 32px;
+  border-radius: 5px;
+  padding: 22%;
 }
 </style>

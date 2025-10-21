@@ -74,10 +74,11 @@ import addColumn from '@/components/board/addColumn.vue';
 <style scoped>
 .altBg {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  column-gap: 1.2%;
+  column-gap: 1%;
   width: 220vh;
-  height: 81vh;
+  height: 71vh;
   background-color: rgba(128, 128, 128, 0.753);
   padding-left: 5px;
 }
