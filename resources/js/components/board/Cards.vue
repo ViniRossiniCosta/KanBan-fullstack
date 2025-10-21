@@ -29,6 +29,8 @@
   border-radius: 9px;
 
   word-break: break-all;
+  padding: 3%;
+  padding-right: 2%;
 }
 
 </style>

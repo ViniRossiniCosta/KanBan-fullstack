@@ -14,82 +14,60 @@ import Board from './Board.vue';
     </Head>
     <nav class="naoseiintegrar flex items-center justify-end gap-4">
         <img src="" alt="" />
-        <Link
+        <a
             v-if="$page.props.auth.user"
-            :href="dashboard()"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Workspaces
+        </a>
+        <a
+            v-if="$page.props.auth.user"
+            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+        >
+            Starred
+        </a>
+        <a
+            v-if="$page.props.auth.user"
             class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
         >
             Board
-        </Link>
-        <Link
+        </a>
+        <a
             v-if="$page.props.auth.user"
-            :href="dashboard()"
             class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
         >
             Board
-        </Link>
-        <Link
-            v-if="$page.props.auth.user"
-            :href="dashboard()"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Board
-        </Link>
-        <Link
-            v-if="$page.props.auth.user"
-            :href="dashboard()"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Board
-        </Link>
-        <Link v-if="$page.props.auth.user" :href="dashboard()">
+        </a>
+        <div v-if="$page.props.auth.user">
             <addCard />
-        </Link>
-        <Link
-            v-if="$page.props.auth.user"
-            :href="dashboard()"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Board
-        </Link>
-        <Link
-            v-if="$page.props.auth.user"
-            :href="dashboard()"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Board
-        </Link>
-        <Link
-            v-if="$page.props.auth.user"
-            :href="dashboard()"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Board
-        </Link>
-        <Link
-            v-if="$page.props.auth.user"
-            :href="dashboard()"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Board
-        </Link>
-        <Link
-            v-if="$page.props.auth.user"
-            :href="dashboard()"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Board
-        </Link>
+        </div>
+
+        <input type="search" placeholder="search.." class="deixabonito" />
+        <div class="">
+            <a
+                v-if="$page.props.auth.user"
+            >
+                <span class="pi pi-bell"></span>
+            </a>
+        </div>
+        <div class="">
+            <a
+                v-if="$page.props.auth.user"
+            >
+                <span class="pi pi-question-circle"></span>
+            </a>
+        </div>
+        <div class="" v-if="$page.props.auth.user">
+            <a> <span class="pi pi-user"></span> </a>
+        </div>
         <template v-else>
             <Link
                 :href="login()"
-                class="inline-block rounded-sm border border-transparent px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#19140035] dark:text-[#EDEDEC] dark:hover:border-[#3E3E3A]"
             >
                 Log in
             </Link>
             <Link
                 :href="register()"
-                class="inline-block rounded-sm border border-[#ffd32435] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
             >
                 Register
             </Link>
@@ -101,11 +79,22 @@ import Board from './Board.vue';
     <FooterD />
 </template>
 <style scoped>
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .naoseiintegrar {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: rgb(255, 255, 255);
+}
+
+.deixabonito {
+    border-radius: 6px;
+    padding: 0.3%;
+    display: flex;
 }
 </style>
