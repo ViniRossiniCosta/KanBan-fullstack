@@ -20,14 +20,19 @@
             Lorem ipsum!
         </div>
         <div class="descricaoeuacho">
-            <div class="passos">
-                <span class="pi pi-check-circle"></span>
-            </div>
-            <div class="anexos">
-                <span class="pi pi-paperclip"></span>
-            </div>
-            <div class="comentarios">
-                <span class="pi pi-comments"></span>
+            <div class="agrupamento">
+                <div class="passos">
+                    <span class="pi pi-check-circle"></span>
+                    <div class="">0/21</div>
+                </div>
+                <div class="comentarios">
+                    <span class="pi pi-comments"></span>
+                    <div class="">3</div>
+                </div>
+                <div class="anexos">
+                    <span class="pi pi-paperclip"></span>
+                    <div class="">1</div>
+                </div>
             </div>
             <div class="usuario">
                 <span class="pi pi-users"></span>
@@ -84,7 +89,64 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+
+.agrupamento {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 225px;
+    position: relative;
+    right: 30px;
+}
+
+.passos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1.2rem;
+    gap: 7px;
+
+    border-radius: 8px;
+    background: #00000034;
+    height: 25px;
+    width: 66px;
+
+    position: relative;
+    left: 19.9px;
+}
+
+.comentarios {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 1.2rem;
+    gap: 7px;
+
+    border-radius: 20px;
+    height: 25px;
+    width: 49px;
+
+    position: relative;
+    left: 19px;
+}
+
+.anexos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1.2rem;
+    gap: 7px;
+
+    border-radius: 20px;
+    height: 25px;
+    width: 39px;
+
+    position: relative;
+    left: 0.1px;
 }
 </style>

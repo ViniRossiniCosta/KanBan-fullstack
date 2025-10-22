@@ -8,10 +8,6 @@ import Board from './Board.vue';
 </script>
 
 <template>
-    <Head title="Welcome">
-        <link rel="preconnect" href="https://rsms.me/" />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    </Head>
     <nav class="naoseiintegrar flex items-center justify-end gap-4">
         <img
             src="../../../public/image-removebg-preview.png"
@@ -24,41 +20,41 @@ import Board from './Board.vue';
         >
             Workspaces
         </a>
-        <a
-            v-if="$page.props.auth.user"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Starred
-        </a>
-        <a
-            v-if="$page.props.auth.user"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Board
-        </a>
-        <a
-            v-if="$page.props.auth.user"
-            class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-        >
-            Board
-        </a>
-        <div v-if="$page.props.auth.user">
-            <addCard />
-        </div>
-
-        <input type="search" placeholder="search.." class="deixabonito" />
-        <div class="">
-            <a v-if="$page.props.auth.user">
-                <span class="pi pi-bell"></span>
+        <div v-if="$page.props.auth.user" class="agrupamentov2">
+            <a
+                class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+            >
+                Recent
             </a>
-        </div>
-        <div class="">
-            <a v-if="$page.props.auth.user">
-                <span class="pi pi-question-circle"></span>
+            <a
+                class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+            >
+                Starred
             </a>
+            <a
+                class="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+            >
+                Templates
+            </a>
+            <div>
+                <addCard />
+            </div>
         </div>
-        <div class="" v-if="$page.props.auth.user">
-            <a> <span class="pi pi-user"></span> </a>
+        <div v-if="$page.props.auth.user" class="agrupamentov2">
+            <input type="search" placeholder="search.." class="deixabonito" />
+            <div class="">
+                <a>
+                    <span class="pi pi-bell"></span>
+                </a>
+            </div>
+            <div class="">
+                <a>
+                    <span class="pi pi-question-circle"></span>
+                </a>
+            </div>
+            <div class="">
+                <a> <span class="pi pi-user"></span> </a>
+            </div>
         </div>
         <template v-else>
             <Link :href="login()"> Log in </Link>
@@ -86,7 +82,8 @@ a {
 
 .deixabonito {
     border-radius: 6px;
-    padding: 0.3%;
+    padding: 1.4%;
+    padding-right: 20px;
     display: flex;
 }
 
@@ -95,5 +92,13 @@ a {
     max-width: 11%;
     width: 3.6%;
     height: 1%;
+}
+
+.agrupamentov2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 400px;
 }
 </style>

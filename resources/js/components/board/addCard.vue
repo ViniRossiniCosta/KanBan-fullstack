@@ -10,7 +10,7 @@
 
 <template>
     <button class="alt" style="font-size: 1.2rem">
-        <span class="pi pi-plus act">Create</span>
+        <span class="material-icons">add</span> Create
     </button>
     <div class="">
         <dialog></dialog>
@@ -27,5 +27,8 @@
   height: 32px;
   border-radius: 5px;
   padding: 22%;
+
+  background-color: #005a96;
+  color: white;
 }
 </style>
