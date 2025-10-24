@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Task;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -19,20 +20,20 @@ class TaskController extends Controller
             'dt_end' => 'required|datetime'
         ]);
 
-        // $task = ::create([
-        //     'nome' => $request->nome,
-        //     'dt_start' => $request->dt_start,
-        //     'dt_end' => $request->dt_end,
-        // ]);
+        $task = Task::create([
+            'nome' => $request->nome,
+            'dt_start' => $request->dt_start,
+            'dt_end' => $request->dt_end,
+        ]);
     }
 
     public function edit() {
         return Inertia::render('task/form');
     }
 
-    // public function update() {
+    public function update() {
 
 
-    //     return back();
-    // }
+        return back();
+    }
 }
